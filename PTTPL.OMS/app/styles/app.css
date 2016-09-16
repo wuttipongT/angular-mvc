@@ -1,0 +1,11 @@
+﻿
+
+.ng-cloak {
+    display: none;
+}
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 9px !important;
+        padding-bottom: 0px !important;
+    }
+}

@@ -1,0 +1,362 @@
+body{
+  height:100%;
+}
+
+.topnavbar{
+	  height: 10px;
+    font-size: 18px;
+    z-index: 0;
+    background-color: #5ec4d0;
+    border: none;
+}
+.horizontal-line{
+    height: 1px;
+    width: auto;
+    background-color: #5ec4d0;
+}
+
+.dropdown-toggle{
+    display: block;
+    text-decoration: none;
+    color: #3b4042;
+}
+
+.dropdown-toggle{
+    display: block;
+    text-decoration: none;
+    color: #3b4042;
+    background-color: none;
+}
+.dropdown-toggle > a:hover,
+.dropdown-toggle > a:focus,{
+    display: block;
+    text-decoration: none;
+    color: #3b4042;
+    background-color: none;
+}
+
+.nav .open>a, 
+.nav .open>a:focus, 
+.nav .open>a:hover{
+	background-color: #5ec4d0;
+}
+.nav>li>a:focus, 
+.nav>li>a:visited {
+	background-color: #5ec4d0;
+}
+
+.dropdown-menu{
+	background-color: white;
+}
+
+.dropdown-menu > a:hover{
+	background-color: #5ec4d0;
+}
+
+.navbarfix{
+    min-height: 37px;
+}
+
+#topnavbar > nav > div > ul > li > a {
+    padding-top:9px;
+    padding-bottom: 9px;
+}
+
+.panel{
+    border-radius: 0px;
+    border-color: #e2e2e2;
+
+}
+
+.panel-heading{
+    padding : 0px;
+    min-height: 34px;
+}
+.panel-heading-text{
+    padding-left:5px;
+    padding-right:5px;
+    line-height: 34px;
+    display:inline-block;
+    background-color: #3b4042;
+    color: white;
+}
+.panel-body{
+
+}
+
+.btn-kasco {
+    color: #fff;
+    background-color: #5ec4d0;
+    border-color: #57b3be;
+}
+
+.btn-kasco-graylink{
+    color: #3b4042;
+    
+}
+.btn-kasco-graylink>a:hover,.btn-kasco-graylink>a:focus{
+    color: #3b4042;
+    text-decoration: none;
+}
+
+.btn{
+    font-size: 14pt;
+    padding:3px 10px;
+}
+td>a{
+    color: #5ec4d0;
+}
+/*Login page*/
+.bglogin{
+    background-color: #3b4042;
+}
+
+.form-signin {
+  max-width: 370px;
+  padding: 0px;
+  margin: 0 auto;
+  background-color:rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  -webkit-box-shadow: 1px 1px 19px 6px rgba(30,32,33,0.39);
+  -moz-box-shadow: 1px 1px 19px 6px rgba(30,32,33,0.39);
+  box-shadow: 1px 1px 19px 6px rgba(30,32,33,0.39);
+}
+
+.form-register{
+  max-width: 700px;
+  padding: 0px;
+  margin: 0 auto;
+  background-color:rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  -webkit-box-shadow: 1px 1px 19px 6px rgba(30,32,33,0.39);
+  -moz-box-shadow: 1px 1px 19px 6px rgba(30,32,33,0.39);
+  box-shadow: 1px 1px 19px 6px rgba(30,32,33,0.39);
+}
+
+.login-header{
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #00aabd;
+    color: white;
+}
+
+.login-element{
+    background-color: #e3e3e3;
+    height: auto;
+    padding : 15px;
+}
+.login-box{
+    border:1px solid white;
+}
+
+.form-horizontal > div{
+padding: 0px;
+margin-bottom: 0px;
+}
+
+.form-horizontal-btn{
+    margin-top: 10px;
+}
+
+.text-white > .btn-link:focus, .text-white > .btn-link:hover,.text-white:hover,{
+    color: white;
+    text-decoration:none;
+    background-color: transparent;
+}
+
+.table-bordered>thead>tr>th{
+    border-bottom: 1px;
+}
+
+.font-booking,.font-booking:hover,.font-booking:focus{
+  color: #8cc43f;
+  font-weight: bolder;
+}
+
+.font-size-table{
+  font-size: 16pt;
+}
+
+.vertical-center{
+  min-height: 100%;  /* Fallback for vh unit */
+  min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+
+
+.footer-kasco {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+
+}
+
+#bgmainpage {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bgmainpage img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.mainpage-header-picture{
+  height: 209px;
+  width: auto;
+  background-image: url("../img/mainpage_header.jpg");
+  background-repeat: left;
+}
+
+.text-color-white{
+  color:white;
+  font-family: 
+}
+
+.mainpage-contant{
+  height: 174px;
+  width: auto;
+  background-image: url("../img/mainpage_contant.jpg");
+  background-repeat: left;
+}
+.mainpage-text-header{
+  background-color : white;
+  font-family: 'Libre Franklin', sans-serif;
+}
+.font-cordia{
+  font-family: cordia new ,tahoma, Times, serif;
+}
+
+.font-bold{
+  font-size : 16pt;
+  font-weight: 900;
+}
+
+.mainpage-border{
+  border-right: 1px solid #5ec4d0;
+  min-height: 195px;
+}
+
+.btn-mainpage {
+    color: #5ec4d0;
+    background-color: #3b4042;
+    border-color: #3b4042;
+}
+.btn-mainpage:hover,.btn-mainpage:focus,.btn-mainpage:visited {
+    color: #5ec4d0;
+    background-color: #2a2e2f;
+    border-color: #3b4042;
+}
+
+.kasco-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 6;
+    background-color: #3b4042;
+    color: #00aabd;
+    padding-right :10px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #f4f4f4;
+}
+
+#submenu1 > li:nth-child(1) > a{
+  padding:0px 0px 0px 0px;
+  border-top: 1px solid #e2e2e2;
+}
+#submenu1 > li:nth-child(2) > a{
+  padding:0px 0px 0px 0px;
+}
+
+.form-control{
+  font-size: 16pt;
+}
+.dropdown-menu>li>a{
+  font-size: 12pt;
+}
+
+.disable-text{
+  color: #e0e0e0;
+}
+
+#sel1{
+  padding : 0px 0px;
+}
+
+@media screen and (max-width: 375px) {
+  .form-signin {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: transparent;
+  margin-top: 30px;
+}
+
+  .extend-but{
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 768px){
+    .form-horizontal .control-label {
+        padding-top: 0px;
+        margin-bottom: 0;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .extend-but{
+    margin-top: 5px;
+  }
+
+}
+ 

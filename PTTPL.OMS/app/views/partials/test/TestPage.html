@@ -1,0 +1,28 @@
+﻿<div class="container">
+        <div>
+            <h3>{{title}}</h3>
+            <button class="btn btn-primary" ng-click="showModal1 = true">Form modal</button>
+            <button class="btn btn-primary" ng-click="showModal2 = true">Confirm form</button>
+            <modal visible="showModal1" on-sown="modalOneShown()" on-hide="modalOneHide()">
+                <modal-header title="Are your sure to do...."></modal-header>
+                <modal-body>
+                    <h3>Message here</h3>
+                    <input type="text" class="form-control" ng-model="txt1" placeholder="text input form" />
+                    <input type="text" class="form-control" ng-model="txt2" placeholder="text input form" />
+
+                </modal-body>
+                <modal-footer>
+                    <button class="btn btn-primary" ng-click="hide(1)">Save</button>
+                    <button class="btn btn-danger" ng-click="hide(1)">Cancel</button>
+                </modal-footer>
+            </modal>
+
+            <modal visible="showModal2" backdrop="static">
+                <modal-header title="Modal Titel 2"></modal-header>
+                <modal-body>
+                    <h3>Message here</h3>
+                </modal-body>
+                <div method="1" ng-model="test" data="test" modal-footer></div>
+            </modal>
+        </div>
+</div>

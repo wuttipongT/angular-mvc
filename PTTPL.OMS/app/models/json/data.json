@@ -1,0 +1,91 @@
+﻿{
+  "menu": {
+    "logo": "contents/template1/img/Logo.jpg",
+    "href": "mainpage.html"
+  },
+  "image": {
+    "src": "contents/template1/img/pat_logo.jpg"
+  },
+  "menuItem": [
+    {
+      "menuItem_Th": "สำหรับผู้ประกอบการขนส่ง",
+      "menuItem_Eng": "สำหรับผู้ประกอบการขนส่ง",
+      "class": "text-center",
+      "style": "color:#ffffff;background-color:#00aabd;",
+      "href": "#",
+      "icon": ""
+    },
+
+    {
+      "menuItem_Th": "หน้าหลัก",
+      "menuItem_Eng": "หน้าหลัก",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "mainpage.html",
+      "icon": "fa-home"
+    },
+
+    {
+      "menuItem_Th": "ดูสถานะการดำเนินงาน",
+      "menuItem_Eng": "ดูสถานะการดำเนินงาน",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "display_quota.html",
+      "icon": "fa-desktop"
+    },
+    {
+      "menuItem_Th": "จองคิว",
+      "menuItem_Eng": "จองคิว",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "booking_date.html",
+      "icon": "fa-truck"
+    },
+
+    {
+      "menuItem_Th": "ข้อมูลผู้ใช้งาน",
+      "menuItem_Eng": "ข้อมูลผู้ใช้งาน",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "#",
+      "icon": "fa-user"
+    },
+
+    {
+      "menuItem_Th": "รายงานสถิติ",
+      "menuItem_Eng": "รายงานสถิติ",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "#",
+      "icon": "fa-bar-chart"
+    },
+
+    {
+      "menuItem_Th": "เปลี่ยนรหัสผ่าน",
+      "menuItem_Eng": "เปลี่ยนรหัสผ่าน",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "changepassword.html",
+      "icon": "fa-exchange"
+    },
+    {
+      "menuItem_Th": "Bagging",
+      "menuItem_Eng": "Bagging",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "changepassword.html",
+      "icon": "fa-exchange"
+    },
+    {
+      "menuItem_Th": "Domestic",
+      "menuItem_Eng": "Domestic",
+      "class": "",
+      "style": "margin-right:20px;",
+      "href": "changepassword.html",
+      "icon": "fa-exchange"
+    }
+  ],
+  "footer": "KASCO DATABASE VERSION 4.0"
+} 
+
+

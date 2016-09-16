@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KASCO TRUCK QUEUE</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- sidebar CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Libre+Franklin' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="z-index:5;">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand" style="border:none;margin-bottom:3px;">
+                    <a href="mainpage.html" class="text-center" >
+                        <img src="img/Logo.jpg" class="img-responsive" style="margin:0 auto;">
+                    </a>    
+                </li>
+                <img src="img/pat_logo.jpg" class="img-responsive">  
+
+                    <div class="input-group" style="padding:10px; ">
+                      <input type="text" class="form-control text-center" placeholder="SEARCH">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" style="color: #8dcee4;"></i></button>
+                      </span>
+                    </div><!-- /input-group -->
+                <li>
+                    <a class="text-center" style="color:#ffffff;background-color:#00aabd;">สำหรับผู้ประกอบการขนส่ง</a>
+                </li>
+                <li>
+                    <a href="mainpage.html"><i class="fa fa-home fa-fw" style="margin-right:20px;"></i> หน้าหลัก</a>
+                </li>
+                
+                <li>
+                    <a href="display_quota.html"><i class="fa fa-desktop fa-fw" style="margin-right:20px;"></i> ดูสถานะการดำเนินงาน</a>
+                </li>
+                <li>
+                    <a href="booking_queue.html"><i class="fa fa-truck fa-fw" style="margin-right:20px;"></i> จองคิว</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw" style="margin-right:20px;"></i>ข้อมูลผู้ใช้งาน</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart fa-fw" style="margin-right:20px;"></i> รายงานสถิติ</a>
+                </li>
+                <li>
+                    <a href="changepassword.html"><i class="fa fa-exchange fa-fw" style="margin-right:20px;"></i> เปลี่ยนรหัสผ่าน</a>
+                </li>  
+
+                <!-- IF have Sub menu -->
+                <!-- <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
+                    <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                        <li><a href="#">Link 2.1</a></li>
+                        <li><a href="#">Link 2.2</a></li>
+                        <li><a href="#">Link 2.3</a></li>
+                    </ul>
+                </li> -->
+                               
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+       
+                        <!-- Toggle -->
+                        <a href="#menu-toggle" class="btn btn-link" id="menu-toggle" style="position:absolute;top:100;left:60; z-index:200; margin:1.5px;"><i class="fa fa-bars fa-fw text-center" style="color:#3b4042;" aria-hidden="true"></i></a>
+                        
+        
+
+        <!-- Page Content -->
+                <!-- Page Header -->
+        <div id="topnavbar">
+            <nav class="navbar navbar-static-top topnavbar navbarfix" style="margin-bottom:0px;">
+                    <div class="container-fluid">
+                        
+                        <ul class="nav navbar-nav navbar-right text-right">
+                          
+                          <li style="margin-top:5px;">ผู้ใช้งาน : นส.เอ นามสมมุติ (บริษัท ตัวอย่างจำกัด )</li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Log out</a></li>
+                            </ul>
+                          </li>
+
+                        </ul>
+                        
+                    </div>
+            </nav>
+        </div>
+        <!-- Page Header -->
+
+        <div id="page-content-wrapper">
+                        
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <div id="page-wrapper">
+            
+                <div class="row" style="padding-top:none;">
+                <div class="col-md-12">
+                    <h2>การจองคิว</h2>
+                    <div class="horizontal-line"></div>
+                </div>
+                
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12" style="margin-top:10px;">    
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><div class="panel-heading-text">ข้อมูลผู้ประกอบการขนส่ง</div></div>
+                      <div class="panel-body ">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <div>ชื่อบริษัทผู้ประกอบการขนส่ง</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" type="text" name="" value="บริษัท ตัวอย่าง จำกัด" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div>เลขที่เอกสาร</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" type="text" name="" value="xxx-xxxx" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>เลขที่ Booking (สายเรือ)</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" type="text" name="" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div>วันที่สร้างเอกสาร</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" type="text" name="" value="10/08/2016" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="col-md-12">    
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><div class="panel-heading-text">ข้อมูลการจองคิว</div></div>
+                      <div class="panel-body">
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>ผู้ประกอบการท่าเรือย่อย</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="form-control" id="sel1" disabled>
+                                          <option> A0</option>
+                                          <option>A0</option>
+                                          <option>A1</option>
+                                          <option>A2</option>
+                                          <option>A3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-md-6 col-xs-12">
+                                <div>ประเภทกิจกรรม</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="form-control" id="sel1" disabled>
+                                          <option>รับตู้หนัก (Import)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>วันที่</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="" class="form-control" value="10/08/2016" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xs-12">
+                                <div>เวลา</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="form-control" id="sel1" disabled>
+                                          <option>0:00 - 1:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>ชื่อเรือ</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="ค้นหาชื่อเรือ">
+                                          <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                          </span>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>หมายเลขตู้คอนเทนเนอร์</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-12">
+                                <div>ประเภทตู้คอนเทนเนอร์</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-12">
+                                <div>ขนาดตู้คอนเทนเนอร์</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>พนักงานขับรถ</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                       <select class="form-control" id="sel1">
+                                          <option>กรุณาเลือกพนักงานขับ</option>
+                                          <option>นายสมชาย  ใจดี</option>
+                                          <option>นายชาติไทย  ขยันดี</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div>ทะเบียนรถ</div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                       <select class="form-control" id="sel1">
+                                          <option>กรุณาเลือกทะเบียนรถ</option>
+                                          <option>ฒข-8699 กรุงเทพฯ</option>
+                                          <option>กห-3190 กรุงเทพฯ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">    
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><div class="panel-heading-text">ยืนยันคำสั่งจอง</div></div>
+                      <div class="panel-body">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="col-md-6 col-xs-12">
+                                <button type="submit" class="btn btn-block btn-kasco">บันทึก</button>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <button type="submit" class="btn btn-block btn-graylink">ล้างฟอร์ม</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            <!-- /.row -->
+
+
+
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:10px;">    
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><div class="panel-heading-text">รายละเอียดข้อมูล</div></div>
+                          <div class="panel-body ">
+                            <!-- Start Table -->
+                                <!--  -->
+                                
+                                                <div class="col-md-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered text-center">
+                                                        
+                                                            <thead >
+                                                                <tr>
+                                                                    <th class="text-center">
+                                                                        ชื่อเรือ
+                                                                    </th>
+                                                                    <th  class="text-center">
+                                                                        ETA
+                                                                    </th>
+                                                                    <th  class="text-center">
+                                                                        POL
+                                                                    </th>
+                                                                    <th  class="text-center">
+                                                                        COL
+                                                                    </th>
+                                                                    <th  class="text-center">
+                                                                        
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                
+                                                                <tr>
+                                                                    <td>
+                                                                        AS MORGANA
+                                                                    </td>
+                                                                    <td>
+                                                                        24 Aug 2016,08:59
+                                                                    </td>
+                                                                    <td>
+                                                                        LCB
+                                                                    </td>
+                                                                    <td>
+                                                                        TH
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="#"><i class="fa fa-pencil " aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        HELMUT
+                                                                    </td>
+                                                                    <td>
+                                                                        25 Aug 2016,17:00
+                                                                    </td>
+                                                                    <td>
+                                                                        LCB
+                                                                    </td>
+                                                                    <td>
+                                                                        TH
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="#"><i class="fa fa-pencil " aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        PET KUM
+                                                                    </td>
+                                                                    <td>
+                                                                        25 Aug 2016,19:00
+                                                                    </td>
+                                                                    <td>
+                                                                        LCB
+                                                                    </td>
+                                                                    <td>
+                                                                        TH
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="#"><i class="fa fa-pencil " aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                            </tbody>
+                                                        
+                                                    </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 text-right">
+                                                    <button type="submit" class="btn btn-kasco"  data-dismiss="modal">ยกเลิก</button>
+                                                </div>
+                <!-- End Table -->
+                          </div>
+                        </div>
+                    </div>                          
+                </div>
+            <!-- /.row -->
+        </div>
+      </div>
+    </div>
+</div>

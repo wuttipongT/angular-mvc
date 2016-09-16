@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KASCO TRUCK QUEUE</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- sidebar CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- DatePick -->
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="z-index:5;">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand" style="border:none;margin-bottom:3px;">
+                    <a href="mainpage.html" class="text-center" >
+                        <img src="img/Logo.jpg" class="img-responsive" style="margin:0 auto;">
+                    </a>    
+                </li>
+                <img src="img/pat_logo.jpg" class="img-responsive">  
+
+                    <div class="input-group" style="padding:10px; ">
+                      <input type="text" class="form-control text-center" placeholder="SEARCH">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" style="color: #8dcee4;"></i></button>
+                      </span>
+                    </div><!-- /input-group -->
+                <li>
+                    <a class="text-center" style="color:#ffffff;background-color:#00aabd;">สำหรับผู้ประกอบการขนส่ง</a>
+                </li>
+                <li>
+                    <a href="mainpage.html"><i class="fa fa-home fa-fw" style="margin-right:20px;"></i> หน้าหลัก</a>
+                </li>
+                
+                <li>
+                    <a href="display_quota.html"><i class="fa fa-desktop fa-fw" style="margin-right:20px;"></i> ดูสถานะการดำเนินงาน</a>
+                </li>
+                <li>
+                    <a href="booking_date.html"><i class="fa fa-truck fa-fw" style="margin-right:20px;"></i> จองคิว</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw" style="margin-right:20px;"></i>ข้อมูลผู้ใช้งาน</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart fa-fw" style="margin-right:20px;"></i> รายงานสถิติ</a>
+                </li>
+                <li>
+                    <a href="changepassword.html"><i class="fa fa-exchange fa-fw" style="margin-right:20px;"></i> เปลี่ยนรหัสผ่าน</a>
+                </li>  
+
+                <!-- IF have Sub menu -->
+                <!-- <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
+                    <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                        <li><a href="#">Link 2.1</a></li>
+                        <li><a href="#">Link 2.2</a></li>
+                        <li><a href="#">Link 2.3</a></li>
+                    </ul>
+                </li> -->
+                               
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->      
+                        <!-- Toggle -->
+                        <a href="#menu-toggle" class="btn btn-link" id="menu-toggle" style="position:absolute;top:100;left:60; z-index:200; margin:1.5px;"><i class="fa fa-bars fa-fw text-center" style="color:#3b4042;" aria-hidden="true"></i></a>                
+        <!-- Page Content -->
+        <!-- Page Header -->
+        <div id="topnavbar">
+            <nav class="navbar navbar-static-top topnavbar navbarfix" style="margin-bottom:0px;">
+                    <div class="container-fluid">
+                        
+                        <ul class="nav navbar-nav navbar-right text-right">
+                          
+                          <li style="margin-top:5px;">ผู้ใช้งาน : นส.เอ นามสมมุติ (บริษัท ตัวอย่างจำกัด )</li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Log out</a></li>
+                            </ul>
+                          </li>
+
+                        </ul>
+                        
+                    </div>
+            </nav>
+        </div>
+        <!-- Page Header -->
+
+        <div id="page-content-wrapper">
+                        
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <div id="page-wrapper">
+            
+                <div class="row" style="padding-top:none;">
+                <div class="col-md-12">
+                    <h2>ช้อมูลผู้ใช้งาน</h2>
+                    <div class="horizontal-line"></div>
+                </div>
+                
+            </div>
+            <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12" style="margin-top:10px;">    
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><div class="panel-heading-text">ช้อมูลผู้ใช้งาน</div></div>
+                          <div class="panel-body ">
+                            <div class="col-lg-12 ">
+                                
+                                <div class="row form-group" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div style="padding-top:5px;" >รหัสโซนท่าเทียบเรือ</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="B5">
+                          </div>  
+
+                        </div>
+
+                        <div class="row form-group" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div style="padding-top:5px;" >ผู้ประกอบการท่าเรือ</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" value="Laem Chabang International Terminal Co., Ltd.">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="" style="padding-top:5px;" >ประเภทการให้บริการ</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="ท่าเทียบเรือตู้สินค้า">
+                          </div>  
+
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;" >ที่อยู่</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="Laem Chabang port 5, Tambon Thung Sukhla, Amphoe Si Racha, Chon Buri, 20230">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;" >หมายเลขประจำตัวผู้เสียภาษี</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;" >ขื่อผู้ติดต่อ</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="Ms. Pakcharin Yodmalai">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;">โทรศัพท์</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="038 408 200">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;" >โทรสาร</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="-">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;" >อีเมลล์</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="lcb1@lcb1.com">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div class="control-label" style="padding-top:5px;" >เว็บไซต์</div>
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                            <input class="form-control" type="text" placeholder="" value="http://www.lcb1.com/">
+                          </div>  
+
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+
+                          <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                            
+                          </div>
+
+                          <div class="col-md-8 col-sm-8 col-xs-8text-left">
+                            <a class="btn btn-default btn-kasco" href="#" role="button">แก้ใชข้อมูล</a>
+                          </div>  
+
+                        </div>
+
+                            <!-- End Detail -->
+
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+            <!-- /.row -->
+
+
+
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <div class="kasco-footer">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    KASCO DATABASE VERSION 4.0
+                </div>  
+            </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- DatePick -->
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <!-- Datepick -->
+    <script>
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+     
+    var checkin = $('#dpd1').datepicker({
+      onRender: function(date) {
+        return date.valueOf() < now.valueOf() ? 'disabled' : '';
+      }
+    }).on('changeDate', function(ev) {
+      if (ev.date.valueOf() > checkout.date.valueOf()) {
+        var newDate = new Date(ev.date)
+        newDate.setDate(newDate.getDate() + 1);
+        checkout.setValue(newDate);
+      }
+      checkin.hide();
+      $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+      onRender: function(date) {
+        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+      }
+    }).on('changeDate', function(ev) {
+      checkout.hide();
+    }).data('datepicker');
+    </script>
+
+</body>
+
+</html>

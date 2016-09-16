@@ -1,0 +1,1532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FE8C317-0CB5-4AC7-B8E0-17A1468C8147}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PTTPL.OMS</RootNamespace>
+    <AssemblyName>PTTPL.OMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\assets\boostrap-material\css\bootstrap-material-design.css" />
+    <Content Include="app\assets\boostrap-material\css\bootstrap-material-design.min.css" />
+    <Content Include="app\assets\boostrap-material\css\ripples.css" />
+    <Content Include="app\assets\boostrap-material\css\ripples.min.css" />
+    <Content Include="app\assets\boostrap-material\js\material.js" />
+    <Content Include="app\assets\boostrap-material\js\material.min.js" />
+    <Content Include="app\assets\boostrap-material\js\ripples.js" />
+    <Content Include="app\assets\boostrap-material\js\ripples.min.js" />
+    <Content Include="app\controllers\index.js" />
+    <Content Include="app\controllers\partials\home\index.js" />
+    <Content Include="app\controllers\state\home.js" />
+    <Content Include="app\js\config.js" />
+    <Content Include="app\js\constants.js" />
+    <Content Include="app\js\main.js" />
+    <Content Include="app\js\run.js" />
+    <Content Include="app\models\menuItemModel.js" />
+    <Content Include="app\models\index.js" />
+    <Content Include="app\services\modalService.js" />
+    <Content Include="app\views\partials\booking\index.html" />
+    <Content Include="app\views\partials\changepassword\index.html" />
+    <Content Include="app\views\partials\customer\bagging-create.html" />
+    <Content Include="app\views\partials\customer\bagging.html" />
+    <Content Include="app\views\partials\customer\domestic.html" />
+    <Content Include="app\views\partials\quota\index.html" />
+    <Content Include="app\views\partials\test\TestPage.html" />
+    <Content Include="app\views\state\home.html" />
+    <Content Include="app\widgets\dirDatepicker\dirDatepicker.html" />
+    <Content Include="app\widgets\dirDatepicker\dirDatepicker.js" />
+    <Content Include="app\widgets\dirHeader\dirHeader.html" />
+    <Content Include="app\widgets\dirHeader\dirHeader.js" />
+    <Content Include="app\widgets\dirModal\dirModal.html" />
+    <Content Include="app\widgets\dirModal\dirModal.js" />
+    <Content Include="app\widgets\dirModal\footerTemplete.html" />
+    <Content Include="app\widgets\dynamicModal\index.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\bower_components\angular-animate\.bower.json" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.min.js.map" />
+    <Content Include="app\bower_components\angular-animate\bower.json" />
+    <Content Include="app\bower_components\angular-animate\package.json" />
+    <Content Include="app\bower_components\angular-animate\README.md" />
+    <Content Include="app\bower_components\angular-aria\.bower.json" />
+    <Content Include="app\bower_components\angular-aria\angular-aria.min.js.map" />
+    <Content Include="app\bower_components\angular-aria\bower.json" />
+    <Content Include="app\bower_components\angular-aria\package.json" />
+    <Content Include="app\bower_components\angular-aria\README.md" />
+    <Content Include="app\bower_components\angular-bootstrap\.bower.json" />
+    <Content Include="app\bower_components\angular-bootstrap\.npmignore" />
+    <Content Include="app\bower_components\angular-bootstrap\bower.json" />
+    <Content Include="app\bower_components\angular-bootstrap\package.json" />
+    <Content Include="app\bower_components\angular-bootstrap\README.md" />
+    <Content Include="app\bower_components\angular-filter\.bower.json" />
+    <Content Include="app\bower_components\angular-filter\.bowerrc" />
+    <Content Include="app\bower_components\angular-filter\.travis.yml" />
+    <Content Include="app\bower_components\angular-filter\bower.json" />
+    <Content Include="app\bower_components\angular-filter\dist\angular-filter.zip" />
+    <Content Include="app\bower_components\angular-filter\license.md" />
+    <Content Include="app\bower_components\angular-local-storage\.bower.json" />
+    <Content Include="app\bower_components\angular-local-storage\.bowerrc" />
+    <Content Include="app\bower_components\angular-local-storage\.travis.yml" />
+    <Content Include="app\bower_components\angular-local-storage\bower.json" />
+    <Content Include="app\bower_components\angular-local-storage\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-local-storage\LICENSE" />
+    <Content Include="app\bower_components\angular-local-storage\package.json" />
+    <Content Include="app\bower_components\angular-local-storage\README.md" />
+    <Content Include="app\bower_components\angular-moment\.bower.json" />
+    <Content Include="app\bower_components\angular-moment\.editorconfig" />
+    <Content Include="app\bower_components\angular-moment\.jshintrc" />
+    <Content Include="app\bower_components\angular-moment\.npmignore" />
+    <Content Include="app\bower_components\angular-moment\.travis.yml" />
+    <Content Include="app\bower_components\angular-moment\angular-moment.min.js.map" />
+    <Content Include="app\bower_components\angular-moment\angular-moment.nuspec" />
+    <Content Include="app\bower_components\angular-moment\bower.json" />
+    <Content Include="app\bower_components\angular-moment\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-moment\CONTRIBUTING.md" />
+    <Content Include="app\bower_components\angular-moment\LICENSE" />
+    <Content Include="app\bower_components\angular-moment\package.json" />
+    <Content Include="app\bower_components\angular-moment\README.md" />
+    <Content Include="app\bower_components\angular-route\.bower.json" />
+    <Content Include="app\bower_components\angular-route\angular-route.min.js.map" />
+    <Content Include="app\bower_components\angular-route\bower.json" />
+    <Content Include="app\bower_components\angular-route\package.json" />
+    <Content Include="app\bower_components\angular-route\README.md" />
+    <Content Include="app\bower_components\angular-ui-router\.bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="app\bower_components\angular-ui-router\LICENSE" />
+    <Content Include="app\bower_components\angular-ui-router\README.md" />
+    <Content Include="app\bower_components\angular\.bower.json" />
+    <Content Include="app\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="app\bower_components\angular\angular.min.js.map" />
+    <Content Include="app\bower_components\angular\bower.json" />
+    <Content Include="app\bower_components\angular\LICENSE.md" />
+    <Content Include="app\bower_components\angular\package.json" />
+    <Content Include="app\bower_components\angular\README.md" />
+    <Content Include="app\bower_components\bootstrap\.bower.json" />
+    <Content Include="app\bower_components\bootstrap\bower.json" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="app\bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="app\bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="app\bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="app\bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="app\bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="app\bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="app\bower_components\bootstrap\less\alerts.less" />
+    <Content Include="app\bower_components\bootstrap\less\badges.less" />
+    <Content Include="app\bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="app\bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="app\bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="app\bower_components\bootstrap\less\buttons.less" />
+    <Content Include="app\bower_components\bootstrap\less\carousel.less" />
+    <Content Include="app\bower_components\bootstrap\less\close.less" />
+    <Content Include="app\bower_components\bootstrap\less\code.less" />
+    <Content Include="app\bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="app\bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="app\bower_components\bootstrap\less\forms.less" />
+    <Content Include="app\bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="app\bower_components\bootstrap\less\grid.less" />
+    <Content Include="app\bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="app\bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="app\bower_components\bootstrap\less\labels.less" />
+    <Content Include="app\bower_components\bootstrap\less\list-group.less" />
+    <Content Include="app\bower_components\bootstrap\less\media.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="app\bower_components\bootstrap\less\modals.less" />
+    <Content Include="app\bower_components\bootstrap\less\navbar.less" />
+    <Content Include="app\bower_components\bootstrap\less\navs.less" />
+    <Content Include="app\bower_components\bootstrap\less\normalize.less" />
+    <Content Include="app\bower_components\bootstrap\less\pager.less" />
+    <Content Include="app\bower_components\bootstrap\less\pagination.less" />
+    <Content Include="app\bower_components\bootstrap\less\panels.less" />
+    <Content Include="app\bower_components\bootstrap\less\popovers.less" />
+    <Content Include="app\bower_components\bootstrap\less\print.less" />
+    <Content Include="app\bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="app\bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="app\bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="app\bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="app\bower_components\bootstrap\less\tables.less" />
+    <Content Include="app\bower_components\bootstrap\less\theme.less" />
+    <Content Include="app\bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="app\bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="app\bower_components\bootstrap\less\type.less" />
+    <Content Include="app\bower_components\bootstrap\less\utilities.less" />
+    <Content Include="app\bower_components\bootstrap\less\variables.less" />
+    <Content Include="app\bower_components\bootstrap\less\wells.less" />
+    <Content Include="app\bower_components\bootstrap\LICENSE" />
+    <Content Include="app\bower_components\bootstrap\package.json" />
+    <Content Include="app\bower_components\bootstrap\README.md" />
+    <Content Include="app\bower_components\jquery-ui\.bower.json" />
+    <Content Include="app\bower_components\jquery-ui\bower.json" />
+    <Content Include="app\bower_components\jquery-ui\component.json" />
+    <Content Include="app\bower_components\jquery-ui\composer.json" />
+    <Content Include="app\bower_components\jquery-ui\package.json" />
+    <Content Include="app\bower_components\jquery-ui\README.md" />
+    <Content Include="app\bower_components\jquery\.bower.json" />
+    <Content Include="app\bower_components\jquery\bower.json" />
+    <Content Include="app\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="app\bower_components\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="app\bower_components\moment\.bower.json" />
+    <Content Include="app\bower_components\moment\bower.json" />
+    <Content Include="app\bower_components\moment\CHANGELOG.md" />
+    <Content Include="app\bower_components\moment\LICENSE" />
+    <Content Include="app\bower_components\moment\README.md" />
+    <Content Include="app\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\fonts\FontAwesome.otf" />
+    <Content Include="app\contents\template1\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\contents\template1\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\contents\template1\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\contents\template1\fonts\fontawesome-webfont.woff2" />
+    <Content Include="app\contents\template1\fonts\FontAwesome.otf" />
+    <Content Include="app\contents\template1\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\contents\template1\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\contents\template1\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\contents\template1\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\models\json\data.json" />
+    <Content Include="app\assets\boostrap-material\css\bootstrap-material-design.css.map" />
+    <Content Include="app\assets\boostrap-material\css\bootstrap-material-design.min.css.map" />
+    <Content Include="app\assets\boostrap-material\css\ripples.css.map" />
+    <Content Include="app\assets\boostrap-material\css\ripples.min.css.map" />
+    <Content Include="app\assets\boostrap-material\js\material.min.js.map" />
+    <Content Include="app\assets\boostrap-material\js\ripples.min.js.map" />
+    <Content Include="app\styles\main.scss" />
+    <Content Include="app\styles\_typography.scss" />
+    <Content Include="app\styles\_vars.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\assets\dpPageLoad\contents\img\loading.gif" />
+    <Content Include="app\assets\dpPageLoad\contents\sectionload.html" />
+    <Content Include="app\assets\dpPageLoad\contents\template.html" />
+    <Content Include="app\assets\dpPageLoad\pageLoad.js" />
+    <Content Include="app\assets\jsLibs\fileSave.js" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.js" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.min.js" />
+    <Content Include="app\bower_components\angular-animate\index.js" />
+    <Content Include="app\bower_components\angular-aria\angular-aria.js" />
+    <Content Include="app\bower_components\angular-aria\angular-aria.min.js" />
+    <Content Include="app\bower_components\angular-aria\index.js" />
+    <Content Include="app\bower_components\angular-bootstrap\.gitignore" />
+    <Content Include="app\bower_components\angular-bootstrap\index.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="app\bower_components\angular-filter\dist\angular-filter.js" />
+    <Content Include="app\bower_components\angular-filter\dist\angular-filter.min.js" />
+    <Content Include="app\bower_components\angular-local-storage\.gitattributes" />
+    <Content Include="app\bower_components\angular-local-storage\.gitignore" />
+    <Content Include="app\bower_components\angular-local-storage\demo\demo-app.js" />
+    <Content Include="app\bower_components\angular-local-storage\demo\demo-style.css" />
+    <Content Include="app\bower_components\angular-local-storage\demo\demo.html" />
+    <Content Include="app\bower_components\angular-local-storage\dist\angular-local-storage.js" />
+    <Content Include="app\bower_components\angular-local-storage\dist\angular-local-storage.min.js" />
+    <Content Include="app\bower_components\angular-moment\.gitignore" />
+    <Content Include="app\bower_components\angular-moment\angular-moment.js" />
+    <Content Include="app\bower_components\angular-moment\angular-moment.min.js" />
+    <Content Include="app\bower_components\angular-moment\Gruntfile.js" />
+    <Content Include="app\bower_components\angular-moment\karma.conf.js" />
+    <Content Include="app\bower_components\angular-moment\tests.js" />
+    <Content Include="app\bower_components\angular-route\angular-route.js" />
+    <Content Include="app\bower_components\angular-route\angular-route.min.js" />
+    <Content Include="app\bower_components\angular-route\index.js" />
+    <Content Include="app\bower_components\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="app\bower_components\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\common.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\resolve.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\state.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\stateFilters.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\templateFactory.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\urlRouter.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\view.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\viewDirective.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\viewScroll.js" />
+    <Content Include="app\bower_components\angular\angular-csp.css" />
+    <Content Include="app\bower_components\angular\angular.js" />
+    <Content Include="app\bower_components\angular\angular.min.js" />
+    <Content Include="app\bower_components\angular\index.js" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="app\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="app\bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="app\bower_components\bootstrap\js\affix.js" />
+    <Content Include="app\bower_components\bootstrap\js\alert.js" />
+    <Content Include="app\bower_components\bootstrap\js\button.js" />
+    <Content Include="app\bower_components\bootstrap\js\carousel.js" />
+    <Content Include="app\bower_components\bootstrap\js\collapse.js" />
+    <Content Include="app\bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="app\bower_components\bootstrap\js\modal.js" />
+    <Content Include="app\bower_components\bootstrap\js\popover.js" />
+    <Content Include="app\bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="app\bower_components\bootstrap\js\tab.js" />
+    <Content Include="app\bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="app\bower_components\bootstrap\js\transition.js" />
+    <Content Include="app\bower_components\bootstrap\package.js" />
+    <Content Include="app\bower_components\jquery-ui\.gitignore" />
+    <Content Include="app\bower_components\jquery-ui\AUTHORS.txt" />
+    <Content Include="app\bower_components\jquery-ui\jquery-ui.js" />
+    <Content Include="app\bower_components\jquery-ui\jquery-ui.min.js" />
+    <Content Include="app\bower_components\jquery-ui\LICENSE.txt" />
+    <Content Include="app\bower_components\jquery\dist\jquery.js" />
+    <Content Include="app\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="app\bower_components\jquery\MIT-LICENSE.txt" />
+    <Content Include="app\bower_components\jquery\src\ajax.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\load.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\parseJSON.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\parseXML.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\script.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="app\bower_components\jquery\src\attributes.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\support.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\val.js" />
+    <Content Include="app\bower_components\jquery\src\callbacks.js" />
+    <Content Include="app\bower_components\jquery\src\core.js" />
+    <Content Include="app\bower_components\jquery\src\core\access.js" />
+    <Content Include="app\bower_components\jquery\src\core\init.js" />
+    <Content Include="app\bower_components\jquery\src\core\parseHTML.js" />
+    <Content Include="app\bower_components\jquery\src\core\ready.js" />
+    <Content Include="app\bower_components\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="app\bower_components\jquery\src\css.js" />
+    <Content Include="app\bower_components\jquery\src\css\addGetHookIf.js" />
+    <Content Include="app\bower_components\jquery\src\css\curCSS.js" />
+    <Content Include="app\bower_components\jquery\src\css\defaultDisplay.js" />
+    <Content Include="app\bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="app\bower_components\jquery\src\css\support.js" />
+    <Content Include="app\bower_components\jquery\src\css\swap.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\cssExpand.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\getStyles.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\isHidden.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="app\bower_components\jquery\src\data.js" />
+    <Content Include="app\bower_components\jquery\src\data\accepts.js" />
+    <Content Include="app\bower_components\jquery\src\data\Data.js" />
+    <Content Include="app\bower_components\jquery\src\data\var\data_priv.js" />
+    <Content Include="app\bower_components\jquery\src\data\var\data_user.js" />
+    <Content Include="app\bower_components\jquery\src\deferred.js" />
+    <Content Include="app\bower_components\jquery\src\deprecated.js" />
+    <Content Include="app\bower_components\jquery\src\dimensions.js" />
+    <Content Include="app\bower_components\jquery\src\effects.js" />
+    <Content Include="app\bower_components\jquery\src\effects\animatedSelector.js" />
+    <Content Include="app\bower_components\jquery\src\effects\Tween.js" />
+    <Content Include="app\bower_components\jquery\src\event.js" />
+    <Content Include="app\bower_components\jquery\src\event\ajax.js" />
+    <Content Include="app\bower_components\jquery\src\event\alias.js" />
+    <Content Include="app\bower_components\jquery\src\event\support.js" />
+    <Content Include="app\bower_components\jquery\src\exports\amd.js" />
+    <Content Include="app\bower_components\jquery\src\exports\global.js" />
+    <Content Include="app\bower_components\jquery\src\intro.js" />
+    <Content Include="app\bower_components\jquery\src\jquery.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="app\bower_components\jquery\src\offset.js" />
+    <Content Include="app\bower_components\jquery\src\outro.js" />
+    <Content Include="app\bower_components\jquery\src\queue.js" />
+    <Content Include="app\bower_components\jquery\src\queue\delay.js" />
+    <Content Include="app\bower_components\jquery\src\selector-native.js" />
+    <Content Include="app\bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="app\bower_components\jquery\src\selector.js" />
+    <Content Include="app\bower_components\jquery\src\serialize.js" />
+    <Content Include="app\bower_components\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="app\bower_components\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="app\bower_components\jquery\src\traversing.js" />
+    <Content Include="app\bower_components\jquery\src\traversing\findFilter.js" />
+    <Content Include="app\bower_components\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="app\bower_components\jquery\src\var\arr.js" />
+    <Content Include="app\bower_components\jquery\src\var\class2type.js" />
+    <Content Include="app\bower_components\jquery\src\var\concat.js" />
+    <Content Include="app\bower_components\jquery\src\var\hasOwn.js" />
+    <Content Include="app\bower_components\jquery\src\var\indexOf.js" />
+    <Content Include="app\bower_components\jquery\src\var\pnum.js" />
+    <Content Include="app\bower_components\jquery\src\var\push.js" />
+    <Content Include="app\bower_components\jquery\src\var\rnotwhite.js" />
+    <Content Include="app\bower_components\jquery\src\var\slice.js" />
+    <Content Include="app\bower_components\jquery\src\var\strundefined.js" />
+    <Content Include="app\bower_components\jquery\src\var\support.js" />
+    <Content Include="app\bower_components\jquery\src\var\toString.js" />
+    <Content Include="app\bower_components\jquery\src\wrap.js" />
+    <Content Include="app\bower_components\moment\locale\af.js" />
+    <Content Include="app\bower_components\moment\locale\ar-ma.js" />
+    <Content Include="app\bower_components\moment\locale\ar-sa.js" />
+    <Content Include="app\bower_components\moment\locale\ar-tn.js" />
+    <Content Include="app\bower_components\moment\locale\ar.js" />
+    <Content Include="app\bower_components\moment\locale\az.js" />
+    <Content Include="app\bower_components\moment\locale\be.js" />
+    <Content Include="app\bower_components\moment\locale\bg.js" />
+    <Content Include="app\bower_components\moment\locale\bn.js" />
+    <Content Include="app\bower_components\moment\locale\bo.js" />
+    <Content Include="app\bower_components\moment\locale\br.js" />
+    <Content Include="app\bower_components\moment\locale\bs.js" />
+    <Content Include="app\bower_components\moment\locale\ca.js" />
+    <Content Include="app\bower_components\moment\locale\cs.js" />
+    <Content Include="app\bower_components\moment\locale\cv.js" />
+    <Content Include="app\bower_components\moment\locale\cy.js" />
+    <Content Include="app\bower_components\moment\locale\da.js" />
+    <Content Include="app\bower_components\moment\locale\de-at.js" />
+    <Content Include="app\bower_components\moment\locale\de.js" />
+    <Content Include="app\bower_components\moment\locale\el.js" />
+    <Content Include="app\bower_components\moment\locale\en-au.js" />
+    <Content Include="app\bower_components\moment\locale\en-ca.js" />
+    <Content Include="app\bower_components\moment\locale\en-gb.js" />
+    <Content Include="app\bower_components\moment\locale\eo.js" />
+    <Content Include="app\bower_components\moment\locale\es.js" />
+    <Content Include="app\bower_components\moment\locale\et.js" />
+    <Content Include="app\bower_components\moment\locale\eu.js" />
+    <Content Include="app\bower_components\moment\locale\fa.js" />
+    <Content Include="app\bower_components\moment\locale\fi.js" />
+    <Content Include="app\bower_components\moment\locale\fo.js" />
+    <Content Include="app\bower_components\moment\locale\fr-ca.js" />
+    <Content Include="app\bower_components\moment\locale\fr.js" />
+    <Content Include="app\bower_components\moment\locale\fy.js" />
+    <Content Include="app\bower_components\moment\locale\gl.js" />
+    <Content Include="app\bower_components\moment\locale\he.js" />
+    <Content Include="app\bower_components\moment\locale\hi.js" />
+    <Content Include="app\bower_components\moment\locale\hr.js" />
+    <Content Include="app\bower_components\moment\locale\hu.js" />
+    <Content Include="app\bower_components\moment\locale\hy-am.js" />
+    <Content Include="app\bower_components\moment\locale\id.js" />
+    <Content Include="app\bower_components\moment\locale\is.js" />
+    <Content Include="app\bower_components\moment\locale\it.js" />
+    <Content Include="app\bower_components\moment\locale\ja.js" />
+    <Content Include="app\bower_components\moment\locale\jv.js" />
+    <Content Include="app\bower_components\moment\locale\ka.js" />
+    <Content Include="app\bower_components\moment\locale\km.js" />
+    <Content Include="app\bower_components\moment\locale\ko.js" />
+    <Content Include="app\bower_components\moment\locale\lb.js" />
+    <Content Include="app\bower_components\moment\locale\lt.js" />
+    <Content Include="app\bower_components\moment\locale\lv.js" />
+    <Content Include="app\bower_components\moment\locale\me.js" />
+    <Content Include="app\bower_components\moment\locale\mk.js" />
+    <Content Include="app\bower_components\moment\locale\ml.js" />
+    <Content Include="app\bower_components\moment\locale\mr.js" />
+    <Content Include="app\bower_components\moment\locale\ms-my.js" />
+    <Content Include="app\bower_components\moment\locale\ms.js" />
+    <Content Include="app\bower_components\moment\locale\my.js" />
+    <Content Include="app\bower_components\moment\locale\nb.js" />
+    <Content Include="app\bower_components\moment\locale\ne.js" />
+    <Content Include="app\bower_components\moment\locale\nl.js" />
+    <Content Include="app\bower_components\moment\locale\nn.js" />
+    <Content Include="app\bower_components\moment\locale\pl.js" />
+    <Content Include="app\bower_components\moment\locale\pt-br.js" />
+    <Content Include="app\bower_components\moment\locale\pt.js" />
+    <Content Include="app\bower_components\moment\locale\ro.js" />
+    <Content Include="app\bower_components\moment\locale\ru.js" />
+    <Content Include="app\bower_components\moment\locale\si.js" />
+    <Content Include="app\bower_components\moment\locale\sk.js" />
+    <Content Include="app\bower_components\moment\locale\sl.js" />
+    <Content Include="app\bower_components\moment\locale\sq.js" />
+    <Content Include="app\bower_components\moment\locale\sr-cyrl.js" />
+    <Content Include="app\bower_components\moment\locale\sr.js" />
+    <Content Include="app\bower_components\moment\locale\sv.js" />
+    <Content Include="app\bower_components\moment\locale\ta.js" />
+    <Content Include="app\bower_components\moment\locale\th.js" />
+    <Content Include="app\bower_components\moment\locale\tl-ph.js" />
+    <Content Include="app\bower_components\moment\locale\tr.js" />
+    <Content Include="app\bower_components\moment\locale\tzl.js" />
+    <Content Include="app\bower_components\moment\locale\tzm-latn.js" />
+    <Content Include="app\bower_components\moment\locale\tzm.js" />
+    <Content Include="app\bower_components\moment\locale\uk.js" />
+    <Content Include="app\bower_components\moment\locale\uz.js" />
+    <Content Include="app\bower_components\moment\locale\vi.js" />
+    <Content Include="app\bower_components\moment\locale\zh-cn.js" />
+    <Content Include="app\bower_components\moment\locale\zh-tw.js" />
+    <Content Include="app\bower_components\moment\min\locales.js" />
+    <Content Include="app\bower_components\moment\min\locales.min.js" />
+    <Content Include="app\bower_components\moment\min\moment-with-locales.js" />
+    <Content Include="app\bower_components\moment\min\moment-with-locales.min.js" />
+    <Content Include="app\bower_components\moment\min\moment.min.js" />
+    <Content Include="app\bower_components\moment\min\tests.js" />
+    <Content Include="app\bower_components\moment\moment.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\check-overflow.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\date-from-array.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\from-anything.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\from-array.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\from-object.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\from-string-and-array.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\from-string-and-format.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\from-string.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\local.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\parsing-flags.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\utc.js" />
+    <Content Include="app\bower_components\moment\src\lib\create\valid.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\abs.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\add-subtract.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\as.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\bubble.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\constructor.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\create.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\duration.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\get.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\humanize.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\iso-string.js" />
+    <Content Include="app\bower_components\moment\src\lib\duration\prototype.js" />
+    <Content Include="app\bower_components\moment\src\lib\format\format.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\calendar.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\constructor.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\en.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\formats.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\invalid.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\lists.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\locale.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\locales.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\ordinal.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\pre-post-format.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\prototype.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\relative.js" />
+    <Content Include="app\bower_components\moment\src\lib\locale\set.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\add-subtract.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\calendar.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\clone.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\compare.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\constructor.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\diff.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\format.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\from.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\get-set.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\locale.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\min-max.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\moment.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\prototype.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\start-end-of.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\to-type.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\to.js" />
+    <Content Include="app\bower_components\moment\src\lib\moment\valid.js" />
+    <Content Include="app\bower_components\moment\src\lib\parse\regex.js" />
+    <Content Include="app\bower_components\moment\src\lib\parse\token.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\aliases.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\constants.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\day-of-month.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\day-of-week.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\day-of-year.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\hour.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\millisecond.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\minute.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\month.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\offset.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\quarter.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\second.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\timestamp.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\timezone.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\units.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\week-year.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\week.js" />
+    <Content Include="app\bower_components\moment\src\lib\units\year.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\abs-ceil.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\abs-floor.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\compare-arrays.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\defaults.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\deprecate.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\extend.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\has-own-prop.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\hooks.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\is-array.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\is-date.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\map.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\to-int.js" />
+    <Content Include="app\bower_components\moment\src\lib\utils\zero-fill.js" />
+    <Content Include="app\bower_components\moment\src\locale\af.js" />
+    <Content Include="app\bower_components\moment\src\locale\ar-ma.js" />
+    <Content Include="app\bower_components\moment\src\locale\ar-sa.js" />
+    <Content Include="app\bower_components\moment\src\locale\ar-tn.js" />
+    <Content Include="app\bower_components\moment\src\locale\ar.js" />
+    <Content Include="app\bower_components\moment\src\locale\az.js" />
+    <Content Include="app\bower_components\moment\src\locale\be.js" />
+    <Content Include="app\bower_components\moment\src\locale\bg.js" />
+    <Content Include="app\bower_components\moment\src\locale\bn.js" />
+    <Content Include="app\bower_components\moment\src\locale\bo.js" />
+    <Content Include="app\bower_components\moment\src\locale\br.js" />
+    <Content Include="app\bower_components\moment\src\locale\bs.js" />
+    <Content Include="app\bower_components\moment\src\locale\ca.js" />
+    <Content Include="app\bower_components\moment\src\locale\cs.js" />
+    <Content Include="app\bower_components\moment\src\locale\cv.js" />
+    <Content Include="app\bower_components\moment\src\locale\cy.js" />
+    <Content Include="app\bower_components\moment\src\locale\da.js" />
+    <Content Include="app\bower_components\moment\src\locale\de-at.js" />
+    <Content Include="app\bower_components\moment\src\locale\de.js" />
+    <Content Include="app\bower_components\moment\src\locale\el.js" />
+    <Content Include="app\bower_components\moment\src\locale\en-au.js" />
+    <Content Include="app\bower_components\moment\src\locale\en-ca.js" />
+    <Content Include="app\bower_components\moment\src\locale\en-gb.js" />
+    <Content Include="app\bower_components\moment\src\locale\eo.js" />
+    <Content Include="app\bower_components\moment\src\locale\es.js" />
+    <Content Include="app\bower_components\moment\src\locale\et.js" />
+    <Content Include="app\bower_components\moment\src\locale\eu.js" />
+    <Content Include="app\bower_components\moment\src\locale\fa.js" />
+    <Content Include="app\bower_components\moment\src\locale\fi.js" />
+    <Content Include="app\bower_components\moment\src\locale\fo.js" />
+    <Content Include="app\bower_components\moment\src\locale\fr-ca.js" />
+    <Content Include="app\bower_components\moment\src\locale\fr.js" />
+    <Content Include="app\bower_components\moment\src\locale\fy.js" />
+    <Content Include="app\bower_components\moment\src\locale\gl.js" />
+    <Content Include="app\bower_components\moment\src\locale\he.js" />
+    <Content Include="app\bower_components\moment\src\locale\hi.js" />
+    <Content Include="app\bower_components\moment\src\locale\hr.js" />
+    <Content Include="app\bower_components\moment\src\locale\hu.js" />
+    <Content Include="app\bower_components\moment\src\locale\hy-am.js" />
+    <Content Include="app\bower_components\moment\src\locale\id.js" />
+    <Content Include="app\bower_components\moment\src\locale\is.js" />
+    <Content Include="app\bower_components\moment\src\locale\it.js" />
+    <Content Include="app\bower_components\moment\src\locale\ja.js" />
+    <Content Include="app\bower_components\moment\src\locale\jv.js" />
+    <Content Include="app\bower_components\moment\src\locale\ka.js" />
+    <Content Include="app\bower_components\moment\src\locale\km.js" />
+    <Content Include="app\bower_components\moment\src\locale\ko.js" />
+    <Content Include="app\bower_components\moment\src\locale\lb.js" />
+    <Content Include="app\bower_components\moment\src\locale\lt.js" />
+    <Content Include="app\bower_components\moment\src\locale\lv.js" />
+    <Content Include="app\bower_components\moment\src\locale\me.js" />
+    <Content Include="app\bower_components\moment\src\locale\mk.js" />
+    <Content Include="app\bower_components\moment\src\locale\ml.js" />
+    <Content Include="app\bower_components\moment\src\locale\mr.js" />
+    <Content Include="app\bower_components\moment\src\locale\ms-my.js" />
+    <Content Include="app\bower_components\moment\src\locale\ms.js" />
+    <Content Include="app\bower_components\moment\src\locale\my.js" />
+    <Content Include="app\bower_components\moment\src\locale\nb.js" />
+    <Content Include="app\bower_components\moment\src\locale\ne.js" />
+    <Content Include="app\bower_components\moment\src\locale\nl.js" />
+    <Content Include="app\bower_components\moment\src\locale\nn.js" />
+    <Content Include="app\bower_components\moment\src\locale\pl.js" />
+    <Content Include="app\bower_components\moment\src\locale\pt-br.js" />
+    <Content Include="app\bower_components\moment\src\locale\pt.js" />
+    <Content Include="app\bower_components\moment\src\locale\ro.js" />
+    <Content Include="app\bower_components\moment\src\locale\ru.js" />
+    <Content Include="app\bower_components\moment\src\locale\si.js" />
+    <Content Include="app\bower_components\moment\src\locale\sk.js" />
+    <Content Include="app\bower_components\moment\src\locale\sl.js" />
+    <Content Include="app\bower_components\moment\src\locale\sq.js" />
+    <Content Include="app\bower_components\moment\src\locale\sr-cyrl.js" />
+    <Content Include="app\bower_components\moment\src\locale\sr.js" />
+    <Content Include="app\bower_components\moment\src\locale\sv.js" />
+    <Content Include="app\bower_components\moment\src\locale\ta.js" />
+    <Content Include="app\bower_components\moment\src\locale\th.js" />
+    <Content Include="app\bower_components\moment\src\locale\tl-ph.js" />
+    <Content Include="app\bower_components\moment\src\locale\tr.js" />
+    <Content Include="app\bower_components\moment\src\locale\tzl.js" />
+    <Content Include="app\bower_components\moment\src\locale\tzm-latn.js" />
+    <Content Include="app\bower_components\moment\src\locale\tzm.js" />
+    <Content Include="app\bower_components\moment\src\locale\uk.js" />
+    <Content Include="app\bower_components\moment\src\locale\uz.js" />
+    <Content Include="app\bower_components\moment\src\locale\vi.js" />
+    <Content Include="app\bower_components\moment\src\locale\zh-cn.js" />
+    <Content Include="app\bower_components\moment\src\locale\zh-tw.js" />
+    <Content Include="app\bower_components\moment\src\moment.js" />
+    <Content Include="app\bower_components\moment\templates\amd-named.js" />
+    <Content Include="app\bower_components\moment\templates\amd.js" />
+    <Content Include="app\bower_components\moment\templates\globals.js" />
+    <Content Include="app\bower_components\moment\templates\locale-header.js" />
+    <Content Include="app\bower_components\moment\templates\test-header.js" />
+    <Content Include="app\contents\css\overide.ace.min.css" />
+    <Content Include="app\contents\template1\booking_date.html" />
+    <Content Include="app\contents\template1\booking_queue.html" />
+    <Content Include="app\contents\template1\booking_queue_Ex.html" />
+    <Content Include="app\contents\template1\changepassword.html" />
+    <Content Include="app\contents\template1\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="app\contents\template1\css\bootstrap.css" />
+    <Content Include="app\contents\template1\css\bootstrap.min.css" />
+    <Content Include="app\contents\template1\css\datepicker.css" />
+    <Content Include="app\contents\template1\css\font-awesome.css" />
+    <Content Include="app\contents\template1\css\font-awesome.min.css" />
+    <Content Include="app\contents\template1\css\simple-sidebar.css" />
+    <Content Include="app\contents\template1\css\style.css" />
+    <Content Include="app\contents\template1\display_quota.html" />
+    <Content Include="app\contents\template1\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\contents\template1\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\contents\template1\forgotpassword.html" />
+    <Content Include="app\contents\template1\img\Logo.jpg" />
+    <Content Include="app\contents\template1\img\mainpage_contact.png" />
+    <Content Include="app\contents\template1\img\mainpage_contant.jpg" />
+    <Content Include="app\contents\template1\img\mainpage_header.jpg" />
+    <Content Include="app\contents\template1\img\mainpage_login.png" />
+    <Content Include="app\contents\template1\img\mainpage_topleft.png" />
+    <Content Include="app\contents\template1\img\mainpage_welcome.png" />
+    <Content Include="app\contents\template1\img\pat_logo.jpg" />
+    <Content Include="app\contents\template1\index.html" />
+    <Content Include="app\contents\template1\js\bootstrap-datepicker.js" />
+    <Content Include="app\contents\template1\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="app\contents\template1\js\bootstrap.js" />
+    <Content Include="app\contents\template1\js\bootstrap.min.js" />
+    <Content Include="app\contents\template1\js\jquery.js" />
+    <Content Include="app\contents\template1\mainpage.html" />
+    <Content Include="app\contents\template1\register_harbor.html" />
+    <Content Include="app\contents\template1\register_transporter.html" />
+    <Content Include="app\contents\template1\userinfo.html" />
+    <Content Include="app\controllers\state\login.js" />
+    <Content Include="app\filters\filterDate.js" />
+    <Content Include="app\filters\filterExpression.js" />
+    <Content Include="app\filters\filterQuery.js" />
+    <Content Include="app\filters\filterRemove.js" />
+    <Content Include="app\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\img\glyphicons\png\glyphicons-1-glass.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-10-magic.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-100-vector-path-all.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-101-font.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-102-italic.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-103-bold.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-104-text-underline.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-105-text-strike.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-106-text-height.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-107-text-width.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-108-text-resize.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-109-left-indent.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-11-envelope.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-110-right-indent.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-111-align-left.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-112-align-center.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-113-align-right.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-114-justify.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-115-list.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-116-text-smaller.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-117-text-bigger.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-118-embed.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-119-embed-close.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-12-camera.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-120-table.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-121-message-full.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-122-message-empty.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-123-message-in.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-124-message-out.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-125-message-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-126-message-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-127-message-ban.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-128-message-flag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-129-message-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-13-heart.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-130-message-new.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-131-inbox.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-132-inbox-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-133-inbox-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-134-inbox-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-135-inbox-in.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-136-inbox-out.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-137-cogwheel.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-138-cogwheels.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-139-picture.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-14-beach-umbrella.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-140-adjust-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-141-database-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-142-database-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-143-database-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-144-database-ban.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-145-folder-open.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-146-folder-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-147-folder-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-148-folder-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-149-folder-flag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-15-train.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-150-folder-new.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-151-edit.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-152-new-window.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-153-check.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-154-unchecked.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-155-more-windows.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-156-show-big-thumbnails.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-157-show-thumbnails.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-158-show-thumbnails-with-lines.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-159-show-lines.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-16-print.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-160-playlist.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-161-imac.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-162-macbook.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-163-ipad.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-164-iphone.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-165-iphone-transfer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-166-iphone-exchange.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-167-ipod.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-168-ipod-shuffle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-169-ear-plugs.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-17-bin.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-170-record.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-171-step-backward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-172-fast-backward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-173-rewind.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-174-play.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-175-pause.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-176-stop.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-177-forward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-178-fast-forward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-179-step-forward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-18-music.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-180-eject.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-181-facetime-video.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-182-download-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-183-mute.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-184-volume-down.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-185-volume-up.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-186-screenshot.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-187-move.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-188-more.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-189-brightness-reduce.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-19-note.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-190-brightness-increase.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-191-circle-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-192-circle-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-193-circle-remove.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-194-circle-ok.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-195-circle-question-mark.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-196-circle-info.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-197-circle-exclamation-mark.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-198-remove.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-199-ok.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-2-leaf.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-20-heart-empty.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-200-ban.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-201-download.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-202-upload.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-203-shopping-cart.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-204-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-205-unlock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-206-electricity.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-207-ok-2.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-208-remove-2.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-209-cart-out.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-21-home.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-210-cart-in.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-211-left-arrow.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-212-right-arrow.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-213-down-arrow.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-214-up-arrow.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-215-resize-small.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-216-resize-full.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-217-circle-arrow-left.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-218-circle-arrow-right.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-219-circle-arrow-top.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-22-snowflake.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-220-circle-arrow-down.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-221-play-button.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-222-unshare.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-223-share.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-224-chevron-right.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-225-chevron-left.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-226-bluetooth.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-227-euro.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-228-usd.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-229-gbp.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-23-fire.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-230-retweet-2.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-231-moon.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-232-sun.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-233-cloud.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-234-direction.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-235-brush.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-236-pen.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-237-zoom-in.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-238-zoom-out.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-239-pin.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-24-magnet.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-240-albums.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-241-rotation-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-242-flash.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-243-google-maps.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-244-anchor.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-245-conversation.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-246-chat.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-247-male.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-248-female.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-249-asterisk.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-25-parents.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-250-divide.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-251-snorkel-diving.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-252-scuba-diving.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-253-oxygen-bottle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-254-fins.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-255-fishes.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-256-boat.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-257-delete.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-258-sheriffs-star.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-259-qrcode.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-26-binoculars.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-260-barcode.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-261-pool.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-262-buoy.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-263-spade.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-264-bank.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-265-vcard.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-266-electrical-plug.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-267-flag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-268-credit-card.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-269-keyboard-wireless.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-27-road.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-270-keyboard-wired.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-271-shield.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-272-ring.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-273-cake.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-274-drink.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-275-beer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-276-fast-food.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-277-cutlery.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-278-pizza.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-279-birthday-cake.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-28-search.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-280-tablet.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-281-settings.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-282-bullets.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-283-cardio.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-284-t-shirt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-285-pants.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-286-sweater.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-287-fabric.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-288-leather.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-289-scissors.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-29-cars.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-290-bomb.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-291-skull.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-292-celebration.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-293-tea-kettle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-294-french-press.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-295-coffee-cup.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-296-pot.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-297-grater.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-298-kettle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-299-hospital.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-3-dog.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-30-notes-2.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-300-hospital-h.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-301-microphone.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-302-webcam.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-303-temple-christianity-church.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-304-temple-islam.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-305-temple-hindu.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-306-temple-buddhist.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-307-bicycle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-308-life-preserver.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-309-share-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-31-pencil.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-310-comments.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-311-flower.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-312-baseball.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-313-rugby.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-314-ax.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-315-table-tennis.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-316-bowling.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-317-tree-conifer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-318-tree-deciduous.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-319-more-items.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-32-bus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-320-sort.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-321-filter.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-322-gamepad.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-323-playing-dices.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-324-calculator.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-325-tie.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-326-wallet.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-327-piano.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-328-sampler.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-329-podium.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-33-wifi-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-330-soccer-ball.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-331-blog.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-332-dashboard.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-333-certificate.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-334-bell.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-335-candle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-336-pushpin.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-337-iphone-shake.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-338-pin-flag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-339-turtle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-34-luggage.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-340-rabbit.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-341-globe.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-342-briefcase.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-343-hdd.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-344-thumbs-up.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-345-thumbs-down.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-346-hand-right.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-347-hand-left.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-348-hand-up.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-349-hand-down.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-35-old-man.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-350-fullscreen.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-351-shopping-bag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-352-book-open.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-353-nameplate.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-354-nameplate-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-355-vases.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-356-bullhorn.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-357-dumbbell.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-358-suitcase.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-359-file-import.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-36-woman.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-360-file-export.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-361-bug.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-362-crown.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-363-smoking.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-364-cloud-download.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-365-cloud-upload.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-366-restart.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-367-security-camera.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-368-expand.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-369-collapse.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-37-file.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-370-collapse-top.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-371-globe-af.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-372-global.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-373-spray.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-374-nails.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-375-claw-hammer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-376-classic-hammer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-377-hand-saw.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-378-riflescope.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-379-electrical-socket-eu.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-38-coins.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-380-electrical-socket-us.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-381-message-forward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-382-coat-hanger.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-383-dress.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-384-bathrobe.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-385-shirt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-386-underwear.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-387-log-in.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-388-log-out.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-389-exit.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-39-airplane.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-390-new-window-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-391-video-sd.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-392-video-hd.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-393-subtitles.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-394-sound-stereo.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-395-sound-dolby.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-396-sound-5-1.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-397-sound-6-1.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-398-sound-7-1.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-399-copyright-mark.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-4-user.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-40-notes.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-400-registration-mark.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-401-radar.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-402-skateboard.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-403-golf-course.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-404-sorting.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-405-sort-by-alphabet.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-406-sort-by-alphabet-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-407-sort-by-order.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-408-sort-by-order-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-409-sort-by-attributes.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-41-stats.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-410-sort-by-attributes-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-411-compressed.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-412-package.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-413-cloud-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-414-cloud-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-415-disk-save.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-416-disk-open.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-417-disk-saved.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-418-disk-remove.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-419-disk-import.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-42-charts.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-420-disk-export.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-421-tower.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-422-send.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-423-git-branch.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-424-git-create.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-425-git-private.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-426-git-delete.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-427-git-merge.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-428-git-pull-request.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-429-git-compare.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-43-pie-chart.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-430-git-commit.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-431-construction-cone.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-432-shoe-steps.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-433-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-434-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-435-redo.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-436-undo.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-437-golf.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-438-hockey.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-439-pipe.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-44-group.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-440-wrench.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-441-folder-closed.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-442-phone-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-443-earphone.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-444-floppy-disk.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-445-floppy-saved.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-446-floppy-remove.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-447-floppy-save.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-448-floppy-open.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-449-translate.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-45-keys.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-450-fax.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-451-factory.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-452-shop-window.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-453-shop.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-454-kiosk.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-455-kiosk-wheels.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-456-kiosk-light.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-457-kiosk-food.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-458-transfer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-459-money.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-46-calendar.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-460-header.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-461-blacksmith.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-462-saw-blade.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-463-basketball.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-464-server.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-465-server-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-466-server-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-467-server-ban.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-468-server-flag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-469-server-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-47-router.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-470-server-new.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-471-elec-station.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-472-gas-station.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-473-target.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-474-bed-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-475-mosquito-net.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-476-dining-set.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-477-plate-of-food.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-478-hygiene-kit.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-479-blackboard.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-48-camera-small.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-480-marriage.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-481-bucket.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-482-none-color-swatch.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-483-bring-forward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-484-bring-to-front.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-485-send-backward.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-486-send-to-back.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-487-fit-frame-to-image.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-488-fit-image-to-frame.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-489-multiple-displays.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-49-star-empty.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-490-handshake.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-491-child.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-492-baby-formula.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-493-medicine.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-494-atv-vehicle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-495-motorcycle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-496-bed.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-497-tent.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-498-glasses.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-499-sunglasses.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-5-girl.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-50-star.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-500-family.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-501-education.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-502-shoes.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-503-map.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-504-cd.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-505-alert.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-506-piggy-bank.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-507-star-half.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-508-cluster.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-509-flowchart.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-51-link.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-510-commodities.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-511-duplicate.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-512-copy.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-513-paste.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-514-bath-bathtub.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-515-bath-shower.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-516-shower.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-517-menu-hamburger.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-518-option-vertical.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-519-option-horizontal.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-52-eye-open.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-520-currency-conversion.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-521-user-ban.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-522-user-lock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-523-user-flag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-524-user-asterisk.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-525-user-alert.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-526-user-key.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-527-user-conversation.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-528-database.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-529-database-search.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-53-eye-close.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-530-list-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-531-hazard-sign.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-532-hazard.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-533-stop-sign.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-534-lab.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-535-lab-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-536-ice-cream.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-537-ice-lolly.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-538-ice-lolly-tasted.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-539-invoice.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-54-alarm.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-540-cart-tick.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-541-hourglass.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-542-cat.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-543-lamp.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-544-scale-classic.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-545-eye-plus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-546-eye-minus.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-547-quote.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-548-bitcoin.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-549-yen.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-55-clock.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-550-ruble.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-551-erase.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-552-podcast.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-553-firework.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-554-scale.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-555-king.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-556-queen.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-557-pawn.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-558-bishop.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-559-knight.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-56-stopwatch.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-560-mic-mute.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-561-voicemail.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-562-paragraph.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-563-person-walking.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-564-person-wheelchair.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-565-underground.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-566-car-hov.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-567-car-rental.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-568-transport.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-569-taxi.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-57-projector.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-570-ice-cream-no.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-571-uk-rat-u.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-572-uk-rat-pg.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-573-uk-rat-12a.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-574-uk-rat-12.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-575-uk-rat-15.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-576-uk-rat-18.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-577-uk-rat-r18.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-578-tv.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-579-sms.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-58-history.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-580-mms.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-581-us-rat-g.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-582-us-rat-pg.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-583-us-rat-pg-13.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-584-us-rat-restricted.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-585-us-rat-no-one-17.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-586-equalizer.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-587-speakers.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-588-remote-control.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-589-remote-control-tv.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-59-truck.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-590-shredder.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-591-folder-heart.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-592-person-running.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-593-person.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-594-voice.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-595-stethoscope.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-596-hotspot.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-597-activity.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-598-watch.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-599-scissors-alt.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-6-car.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-60-cargo.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-600-car-wheel.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-601-chevron-up.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-602-chevron-down.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-603-superscript.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-604-subscript.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-605-text-size.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-606-text-color.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-607-text-background.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-608-modal-window.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-609-newspaper.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-61-compass.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-610-tractor.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-62-keynote.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-63-paperclip.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-64-power.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-65-lightbulb.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-66-tag.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-67-tags.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-68-cleaning.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-69-ruler.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-7-user-add.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-70-gift.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-71-umbrella.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-72-book.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-73-bookmark.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-74-wifi.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-75-cup.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-76-stroller.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-77-headphones.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-78-headset.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-79-warning-sign.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-8-user-remove.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-80-signal.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-81-retweet.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-82-refresh.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-83-roundabout.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-84-random.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-85-heat.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-86-repeat.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-87-display.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-88-log-book.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-89-address-book.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-9-film.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-90-building.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-91-eyedropper.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-92-adjust.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-93-tint.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-94-crop.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-95-vector-path-square.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-96-vector-path-circle.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-97-vector-path-polygon.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-98-vector-path-line.png" />
+    <Content Include="app\img\glyphicons\png\glyphicons-99-vector-path-curve.png" />
+    <Content Include="app\img\header-pattern-150.png" />
+    <Content Include="app\index.html" />
+    <Content Include="app\models\productModel.js" />
+    <Content Include="app\modules\demo\js\demo.js" />
+    <Content Include="app\modules\demo\view\demo.html" />
+    <Content Include="app\services\authInterceptorService.js" />
+    <Content Include="app\services\authService.js" />
+    <Content Include="app\services\commonService.js" />
+    <Content Include="app\services\config.js" />
+    <Content Include="app\services\dataConstant.js" />
+    <Content Include="app\styles\app.css" />
+    <Content Include="app\styles\controls.css" />
+    <Content Include="app\views\partials\home\index.html" />
+    <Content Include="app\views\state\login.html" />
+    <Content Include="app\widgets\dirFooter\dirFooter.js" />
+    <Content Include="app\widgets\dirFooter\footer.html" />
+    <Content Include="app\widgets\dirNavBar\dirNavBar.js" />
+    <Content Include="app\widgets\dirNavBar\navbar.html" />
+    <Content Include="Default.html" />
+    <Content Include="scripts\ai.0.22.19-build00125.js" />
+    <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\bower_components\angular-ui-router\api\" />
+    <Folder Include="app\contents\img\" />
+    <Folder Include="app\views\partials\operation\" />
+    <Folder Include="gulp\tasks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49819</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49819/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
